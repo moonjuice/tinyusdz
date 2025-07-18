@@ -2,7 +2,9 @@ name: Android
 
 on:
   push:
-    branches: [ dev, release ]
+    branches:
+      - dev
+      - release
   pull_request:
     branches: [ dev ]
 
@@ -16,7 +18,9 @@ jobs:
     name: Build for Android(arm64v8a)
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
+        with:
+          ref: 'release'
       - name: Show android sdk root
         run: |
             env | grep ANDROID
