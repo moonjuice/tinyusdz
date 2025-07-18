@@ -35,3 +35,4 @@ $CMAKE_BIN -G Ninja -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_ROOT/build/cmake/android
   ..
 
 cd ..
+zip -r -9 build-android.zip build-android
